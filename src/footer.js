@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Acast from './icons/acast'
+// import Acast from './icons/acast'
 import Anchor from './icons/anchor'
 import Breaker from './icons/breaker'
 import CastBox from './icons/cast-box'
@@ -14,46 +14,75 @@ import Spotify from './icons/spotify'
 import Stitcher from './icons/stitcher'
 import TuneIn from './icons/tunein'
 
+const HostLink = ({ title, href, children }) => <a
+  aria-label={title}
+  title={title}
+  href={href}
+  className={`icon ${title.toLowerCase().replace(/ /g, '-')}`}>
+  {children}
+</a>
+
 export default () => <footer className='footer'>
   <div className='content'>
-    <i className='icon'>
+    <HostLink
+      title='Anchor'
+      href='https://anchor.fm/blank-string'>
       <Anchor />
-    </i>
-    <i className='icon'>
-      <Acast />
-    </i>
-    <i className='icon'>
+    </HostLink>
+    <HostLink
+      title='Breaker'
+      href='https://www.breaker.audio/blank-string'>
       <Breaker />
-    </i>
-    <i className='icon'>
+    </HostLink>
+    <HostLink
+      title='Cast Box'
+      href='https://castbox.fm/channel/id1422683'>
       <CastBox />
-    </i>
-    <i className='icon'>
+    </HostLink>
+    <HostLink
+      title='Google Podcast'
+      href='https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy83OWQwZDA4L3BvZGNhc3QvcnNz'>
       <GooglePodcast />
-    </i>
-    <i className='icon'>
+    </HostLink>
+    <HostLink
+      title='iTunes'
+      href='https://itunes.apple.com/us/podcast/blank-string/id1267592100?mt=2&uo=4'>
       <ITunes />
-    </i>
-    <i className='icon'>
+    </HostLink>
+    <HostLink
+      title='Overcast'
+      href='https://overcast.fm/itunes1267592100/blank-string'>
       <Overcast />
-    </i>
-    <i className='icon'>
+    </HostLink>
+    <HostLink
+      title='Pocket Cast'
+      href='https://pca.st/X6sO'>
       <PocketCast />
-    </i>
-    <i className='icon'>
+    </HostLink>
+    <HostLink
+      title='Pocket Cast'
+      href='https://www.podbean.com/podcast-detail/kaf45-62411/Blank-String-Podcast'>
       <Podbean />
-    </i>
-    <i className='icon'>
+    </HostLink>
+    <HostLink
+      title='Radio Public'
+      href='https://radiopublic.com/blank-string-WRw9x3'>
       <RadioPublic />
-    </i>
-    <i className='icon'>
+    </HostLink>
+    <HostLink
+      title='Spotify'
+      href='https://open.spotify.com/show/11RzPwC3hC985sncuGy2Z1'>
       <Spotify />
-    </i>
-    <i className='icon stitcher'>
+    </HostLink>
+    <HostLink
+      title='Stitcher'
+      href='https://www.stitcher.com/podcast/blank-string'>
       <Stitcher />
-    </i>
-    <i className='icon tunein'>
+    </HostLink>
+    <HostLink
+      title='Tune In'
+      href='https://tunein.com/podcasts/Comedy-Podcasts/Blank-String-p1017367'>
       <TuneIn />
-    </i>
+    </HostLink>
   </div>
 </footer>
