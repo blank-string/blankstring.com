@@ -1,3 +1,7 @@
+/* font-family: 'Audiowide', cursive;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
 html {
   background-color: #1F1C1C !important;
   color: #F2F2F2 !important;
@@ -13,6 +17,9 @@ html {
 }
 
 .hero .title {
+  font-family: 'Audiowide', cursive;
+  letter-spacing: 1px;
+  font-weight: normal;
   color: #F2F2F2;
 }
 
@@ -29,6 +36,17 @@ html {
   width: 192px;
 }
 
+
+.main .subtitle {
+  font-family: 'Exo 2', sans-serif;
+  color: #F2F2F2;
+  letter-spacing: 2px;
+  font-weight: bold;
+  max-width: 700px;
+  font-size: 21px;
+  margin: auto
+
+}
 
 .footer {
   background-color: #1F1C1C !important;

@@ -6,8 +6,7 @@ var parser = require('fast-xml-parser')
 
 const reducer = (state, { type, payload }) => {
   if (type === 'fetch-rss') {
-    const link = payload.data.rss.channel.item[0].link.replace('/episodes/', '/embed/episodes/')
-    return { loading: false, link }
+    return { loading: false }
   }
 
   return { loading: true }
@@ -37,14 +36,11 @@ export default () => {
     <header>
       <Hero />
     </header>
-    <main>
+    <main className='main'>
       <div className='container'>
-        {state.link
-          ? <iframe
-            title='Blank String embed'
-            src={state.link}
-            scrolling='no' />
-          : null}
+        <section className='section'>
+          <h2 className='subtitle has-text-centered'>This is the Blank String podcast, staring Luke, Tim and Matt as they talk about things and stuff and junk and things.</h2>
+        </section>
       </div>
     </main>
     <Footer />
