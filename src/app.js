@@ -1,8 +1,10 @@
 import React, { useReducer, useEffect } from 'react'
 
+import parser from 'fast-xml-parser'
+
 import Hero from './hero'
+import Main from './main'
 import Footer from './footer'
-var parser = require('fast-xml-parser')
 
 const reducer = (state, { type, payload }) => {
   if (type === 'fetch-rss') {
@@ -37,11 +39,7 @@ export default () => {
       <Hero />
     </header>
     <main className='main'>
-      <div className='container'>
-        <section className='section'>
-          <h2 className='subtitle has-text-centered'>This is the Blank String podcast, staring Luke, Tim and Matt as they talk about things and stuff and junk and things.</h2>
-        </section>
-      </div>
+      <Main />
     </main>
     <Footer />
   </div>
