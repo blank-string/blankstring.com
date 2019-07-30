@@ -1,3 +1,35 @@
+html {
+  background-color: #1F1C1C !important;
+  color: #F2F2F2 !important;
+}
+
+.hero {
+  background-color: #1F1C1C !important;
+  overflow: hidden;
+}
+
+.hero-body {
+  padding: 20px 0 !important;
+}
+
+.hero .title {
+  color: #F2F2F2;
+}
+
+.hero .title .b {
+  color: #B30707;
+}
+
+.hero .title .s {
+  color: #F9C20F;
+}
+
+.hero .image {
+  transform: rotate(45deg);
+  width: 192px;
+}
+
+
 .footer {
   background-color: #1F1C1C !important;
   padding: 0 !important;
@@ -5,6 +37,7 @@
 
 .footer .content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   height: 20px;
@@ -14,10 +47,14 @@
 .footer .icon {
   height: 20px;
   fill: #F2F2F2;
-  margin: 0 0.4rem;
+  margin: 0.4rem;
 }
 
 .footer .stitcher,
 .footer .tune-in {
   width: 44px;
+}
+
+main {
+  background-color: #3B3232 !important;
 }
