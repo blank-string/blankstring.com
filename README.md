@@ -20,6 +20,5 @@ npm start
 * make the home page
 * make episode pages
 * make distribution pages
-* embed player
-* create a script which generates html files for each episode
-* travis to run this every day
+* create a script which generates html files for each episode, react-snap can do some of this but won't be able to do each episode
+* travis to run this every day adding a "last updated" to each page

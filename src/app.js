@@ -2,20 +2,18 @@ import React, { useReducer, useEffect } from 'react'
 
 import parser from 'fast-xml-parser'
 
+import initialState from './initial-state.json'
 import Hero from './hero'
 import Main from './main'
 import Footer from './footer'
 
 const reducer = (state, { type, payload }) => {
   if (type === 'fetch-rss') {
-    return { loading: false }
+    const { description, item } = payload.data.rss.channel
+    return { loading: false, description, item }
   }
 
   return { loading: true }
-}
-
-const initialState = {
-  loading: true
 }
 
 const fetchRss = async (dispatch) => {
@@ -23,7 +21,6 @@ const fetchRss = async (dispatch) => {
     mode: 'cors'
   })
   const text = await res.text()
-  parser.parse(text)
   dispatch({ type: 'fetch-rss', payload: { data: parser.parse(text) } })
 }
 
@@ -39,7 +36,7 @@ export default () => {
       <Hero />
     </header>
     <main className='main'>
-      <Main />
+      <Main state={state} />
     </main>
     <Footer />
   </div>

@@ -9,7 +9,7 @@ html {
 
 .hero {
   background-color: #1F1C1C !important;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .hero-body {
@@ -45,7 +45,87 @@ html {
   max-width: 700px;
   font-size: 21px;
   margin: auto
+}
 
+.episodes {
+  margin-bottom: 1em;
+}
+
+.episode + .episode {
+  border: none !important;
+  margin-top: 3em !important;
+}
+
+.episode .media-content {
+  margin-left: 1.5em;
+}
+
+.episode .image {
+  position: relative;
+  background-color: #1F1C1C;
+  border-radius: 4px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.95), 0 0 8px rgba(0, 0, 0, 0.95);
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.episode .image img {
+  transform: rotate(90deg) scale(2.5) translateX(10px);
+}
+
+.episode-number {
+  font-family: 'Audiowide', cursive;
+  font-size: 18px;
+  color: #F2F2F2;
+  text-align: center;
+  line-height: 64px;
+}
+
+.episode-image-container,
+.episode-number {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+
+.episode-number {
+  left: 0;
+}
+
+.episode-image-container {
+  right: 0;
+}
+
+.episode .title {
+  color: #F2F2F2;
+  font-size: 22px;
+  font-weight: normal;
+  font-family: 'Exo 2', sans-serif;
+  margin-bottom: 0.6em !important;
+}
+
+.episode .content {
+  font-size: 16px;
+  color: #F2F2F2;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main .pagination-next,
+.main .pagination-link {
+  background-color: transparent;
+  color: #F2F2F2;
+}
+.main .pagination-next:hover,
+.main .pagination-link:hover {
+  color: #b3b3b3;
+  border-color: #b3b3b3;
+}
+
+.main .pagination-link.is-current {
+  background-color: #F2F2F2;
+  border-color: #F2F2F2;
+  color: black;
 }
 
 .footer {
