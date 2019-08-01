@@ -1,4 +1,5 @@
 import React, { useReducer, useEffect } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import parser from 'fast-xml-parser'
 
@@ -36,7 +37,9 @@ export default () => {
       <Hero />
     </header>
     <main className='main'>
-      <Main state={state} />
+      <Router>
+        <Route path='/' render={({ history }) => <Main history={history} state={state} />} />
+      </Router>
     </main>
     <Footer />
   </div>
