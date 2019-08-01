@@ -38,7 +38,9 @@ export default () => {
     </header>
     <main className='main'>
       <Router>
-        <Route path='/' render={({ history }) => <Main history={history} state={state} />} />
+        <Route exact path='/' render={(props) => <Main {...props} state={state} />} />
+        <Route exact path='/page' render={(props) => <Main {...props} state={state} />} />
+        <Route path='/page/:page' render={(props) => <Main {...props} state={state} />} />
       </Router>
     </main>
     <Footer />

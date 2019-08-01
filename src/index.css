@@ -65,6 +65,7 @@ html {
 
 .episode .media-content {
   margin-left: 1.5em;
+  min-height: 120px;
 }
 
 .episode .image {
@@ -131,22 +132,30 @@ main {
   background-color: #3B3232 !important;
 }
 
-.main .pagination-next,
-.main .pagination-link {
+.pagination-previous,
+.pagination-next,
+.pagination-link {
   background-color: transparent;
-  color: #F2F2F2;
+  color: #F2F2F2 !important;
 }
 
-.main .pagination-next:hover,
-.main .pagination-link:hover {
-  color: #b3b3b3;
-  border-color: #b3b3b3;
+.pagination-previous[disabled],
+.pagination-next[disabled],
+.pagination-link[disabled] {
+  background-color: transparent !important;
 }
 
-.main .pagination-link.is-current {
-  background-color: #F2F2F2;
-  border-color: #F2F2F2;
-  color: black;
+.pagination-previous:hover
+.pagination-next:hover,
+.pagination-link:hover {
+  color: #b3b3b3 !important;
+  border-color: #b3b3b3 !important;
+}
+
+.pagination-link.is-current {
+  background-color: #F2F2F2 !important;
+  border-color: #F2F2F2 !important;
+  color: black !important;
 }
 
 .footer {

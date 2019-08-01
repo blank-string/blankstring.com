@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({ number, title, description }) => <article className='episode media'>
+export default ({ number = 0, title, description }) => <article className='episode media'>
   <figure className='media-left'>
     <div className='image is-64x64'>
       <div className='episode-number'>
