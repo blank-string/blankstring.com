@@ -9,12 +9,12 @@ export default ({ state }) => <div className='container'>
     <MainTitle description={state.description} />
   </section>
   <section className='section'>
-    <input type='text' placeholder='Search Title or Description' />
+    {/* <input type='text' placeholder='Search Title or Description' /> */}
+    {state.loading ? <button className='button is-loading is-fullwidth' /> : null}
     <div className='episodes'>
       {state.item.slice(0, 5).map(item => {
         return <Episode key={item['itunes:episode']} title={item.title} number={item['itunes:episode']} description={item.description.replace('<p>', '').replace('</p>', '')} />
       })}
-
     </div>
     {/* <nav className='pagination' role='navigation' aria-label='pagination'>
       <a className='pagination-previous' title='This is the first page' disabled>Previous</a>

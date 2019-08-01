@@ -14,6 +14,10 @@ export default ({ number, title, description }) => <article className='episode m
   </figure>
   <div className='media-content'>
     <h3 className='title'>{title}</h3>
-    <p className='content'>{description}</p>
+    <p className='content is-hidden-mobile'>{description}</p>
+    <div className='is-hidden-tablet'>
+      <p className='content is-collapsed'>{description}</p>
+      <button className='button'>SHOW MORE</button>
+    </div>
   </div>
 </article>

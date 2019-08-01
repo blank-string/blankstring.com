@@ -13,9 +13,7 @@ export default () => <section className='hero'>
           </h1>
         </div>
         <div className='level-right'>
-
           <BlankString />
-
         </div>
       </div>
     </div>

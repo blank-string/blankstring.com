@@ -9,7 +9,9 @@ html {
 
 .hero {
   background-color: #1F1C1C !important;
-  overflow: hidden; 
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.95), 0 0 8px rgba(0, 0, 0, 0.95);
 }
 
 .hero-body {
@@ -21,6 +23,7 @@ html {
   letter-spacing: 1px;
   font-weight: normal;
   color: #F2F2F2;
+  padding-left: 1rem;
 }
 
 .hero .title .b {
@@ -36,7 +39,6 @@ html {
   width: 192px;
 }
 
-
 .main .subtitle {
   font-family: 'Exo 2', sans-serif;
   color: #F2F2F2;
@@ -47,11 +49,16 @@ html {
   margin: auto
 }
 
+.main .is-loading {
+  background: transparent;
+  border: none;
+}
+
 .episodes {
   margin-bottom: 1em;
 }
 
-.episode + .episode {
+.episode+.episode {
   border: none !important;
   margin-top: 3em !important;
 }
@@ -98,17 +105,30 @@ html {
 }
 
 .episode .title {
+  letter-spacing: 1px;
   color: #F2F2F2;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: normal;
   font-family: 'Exo 2', sans-serif;
   margin-bottom: 0.6em !important;
 }
 
 .episode .content {
+  letter-spacing: 1px;
+  line-height: 22px;
   font-size: 16px;
   color: #F2F2F2;
   font-family: 'Roboto', sans-serif;
+}
+
+.episode .content.is-collapsed {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main {
+  background-color: #3B3232 !important;
 }
 
 .main .pagination-next,
@@ -116,6 +136,7 @@ html {
   background-color: transparent;
   color: #F2F2F2;
 }
+
 .main .pagination-next:hover,
 .main .pagination-link:hover {
   color: #b3b3b3;
@@ -151,8 +172,4 @@ html {
 .footer .stitcher,
 .footer .tune-in {
   width: 44px;
-}
-
-main {
-  background-color: #3B3232 !important;
 }
