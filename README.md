@@ -18,9 +18,9 @@ npm start
 ## TODO
 
 * make the home page
+  * share, react-share, rip out the contents of it
+  * icon goes to episode page
   * search
-  * share
-  * icon goes to anchor
 * make episode pages
 * make distribution pages
 * create a script which generates html files for each episode, react-snap can do some of this but won't be able to do each episode
