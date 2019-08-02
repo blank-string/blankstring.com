@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Share from './icons/share.js'
+
 export default ({ number = 0, title, description }) => <article className='episode media'>
   <figure className='media-left'>
     <div className='image is-64x64'>
@@ -10,7 +12,14 @@ export default ({ number = 0, title, description }) => <article className='episo
         <img src='/string.png' alt={number} />
       </div>
     </div>
-    {/* <button className='button'>SHARE</button> */}
+    <button className='button share'>
+      <span className='icon'>
+        <Share />
+      </span>
+      <span className='label'>
+        Share
+      </span>
+    </button>
   </figure>
   <div className='media-content'>
     <h3 className='title'>{title}</h3>

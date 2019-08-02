@@ -21,7 +21,7 @@ export default ({ page, state }) => {
         pathname: `/page/${page < pages ? page + 1 : page}`
       }}
       className='pagination-next'>
-      Next page
+      Next
     </Link>
     <ul className='pagination-list'>
       {arr.map((x, index) => {
