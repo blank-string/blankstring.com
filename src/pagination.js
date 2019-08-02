@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+const pageSize = Number(process.env.REACT_APP_PAGE_SIZE)
+
 export default ({ page, state }) => {
-  const pages = Math.ceil(state.item.length / 5)
+  const pages = Math.ceil(state.item.length / pageSize)
   const arr = new Array(pages).fill(0)
   return <nav className='pagination' role='navigation' aria-label='pagination'>
     <Link
