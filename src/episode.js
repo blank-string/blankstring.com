@@ -1,8 +1,9 @@
 import React from 'react'
 
 import Share from './icons/share.js'
+import { facebook, reddit, twitter } from './sharer'
 
-export default ({ number = 0, title, description }) => <article className='episode media'>
+export default ({ url, number = 0, title, description }) => <article className='episode media'>
   <figure className='media-left'>
     <div className='image is-64x64'>
       <div className='episode-number'>
@@ -12,7 +13,13 @@ export default ({ number = 0, title, description }) => <article className='episo
         <img src='/string.png' alt={number} />
       </div>
     </div>
-    <button className='button share'>
+    <button
+      className='button share'
+      onClick={() => {
+        console.log(facebook(url, { quote: 'Hello' }))
+        console.log(reddit(url, { title: 'Hello' }))
+        console.log(twitter(url, { title: 'Hello' }))
+      }}>
       <span className='icon'>
         <Share />
       </span>
