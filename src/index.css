@@ -60,10 +60,6 @@ html {
   border: none;
 }
 
-.episodes {
-  margin-bottom: 1em;
-}
-
 .episode+.episode {
   border: none !important;
   margin-top: 3em !important;
@@ -154,6 +150,10 @@ html {
 
 main {
   background-color: #3B3232 !important;
+}
+
+.pagination {
+  margin: 1em 0 !important;
 }
 
 .pagination-previous,

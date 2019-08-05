@@ -12,6 +12,7 @@ export default ({ match, state }) => {
       <MainTitle description={state.description} />
     </section>
     <section className='section'>
+      {state.loading ? null : <Pagination page={page} state={state} />}
       {/* <input type='text' placeholder='Search Title or Description' /> */}
       <Episodes page={page} state={state} />
       {state.loading ? null : <Pagination page={page} state={state} />}
