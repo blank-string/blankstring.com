@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import parser from 'fast-xml-parser'
 
@@ -38,9 +38,16 @@ export default () => {
     </header>
     <main className='main'>
       <Router>
-        <Route exact path='/' render={(props) => <Main {...props} state={state} />} />
-        <Route exact path='/page' render={(props) => <Main {...props} state={state} />} />
-        <Route path='/page/:page' render={(props) => <Main {...props} state={state} />} />
+        <Switch>
+          <Route exact path='/' render={(props) => <Main {...props} state={state} />} />
+          <Route path='/page' render={(props) => <Main {...props} state={state} />} />
+          <Route path='/page/:page' render={(props) => <Main {...props} state={state} />} />
+          {/* <Route path='/episode' render={(props) => <Epsiode {...props} state={state} />} /> */}
+          {/* <Route path='/episode/:episode' render={(props) => <Epsiode {...props} state={state} />} /> */}
+          {/* <Route path='/distribution' render={(props) => <Distribution {...props} state={state} />} /> */}
+          {/* <Route path='/distribution/:distribution' render={(props) => <Distribution {...props} state={state} />} /> */}
+          {/* <Route path='*' render={(props) => <NotFound {...props} state={state} />} /> */}
+        </Switch>
       </Router>
     </main>
     <Footer />
