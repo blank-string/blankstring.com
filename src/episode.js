@@ -42,7 +42,7 @@ export default ({ url, number = 0, title, description }) => {
           <span>{number}</span>
         </div>
         <div className='episode-image-container'>
-          <img src='/string.jpg' alt={number} />
+          <img src='/string-episode.jpg' alt={number} />
         </div>
       </div>
       <div className='social'>
