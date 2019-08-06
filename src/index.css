@@ -8,6 +8,16 @@ html {
 }
 
 
+.subtitle {
+  background-color: transparent;
+  color: #F2F2F2 !important;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.subtitle a {
+  border-bottom: solid 1px !important;
+}
+
 .icon {
   color: #F2F2F2;
 }
