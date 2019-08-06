@@ -213,6 +213,12 @@ main {
   margin: 0.4rem;
 }
 
+.hosts .icon:hover,
+.hosts .icon:active,
+.hosts .icon:focus {
+  fill: #b3b3b3 !important;
+}
+
 .hosts .stitcher,
 .hosts .tune-in {
   width: 44px;
