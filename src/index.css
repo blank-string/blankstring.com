@@ -7,10 +7,24 @@ html {
   color: #F2F2F2 !important;
 }
 
-.icon svg {
-  width: 100%;
-  height: auto;
+
+.icon {
+  color: #F2F2F2;
 }
+
+a {
+  color: #F2F2F2 !important;
+}
+
+a:hover,
+a:active,
+a:focus,
+a:hover .icon,
+a:active .icon,
+a:focus .icon {
+  color: #b3b3b3 !important;
+}
+
 
 .hero {
   background-color: #1F1C1C !important;
@@ -62,11 +76,11 @@ html {
 
 .episode+.episode {
   border: none !important;
-  margin-top: 3em !important;
+  margin-top: 6em !important;
 }
 
 .episode .media-content {
-  margin-left: 1.5em;
+  margin-left: 1.7em;
   min-height: 120px;
 }
 
@@ -130,22 +144,19 @@ html {
   text-overflow: ellipsis;
 }
 
-.episode .share {
-  height: 28px;
-  border: none;
-  background-color: transparent
+.links {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.1s ease-in-out;
 }
 
-.episode .share .icon {
-  width: 14px;
-  fill: #f2f2f2;
-  transform: translateY(-2px);
+.links.is-open {
+  height: 108px;
 }
 
-.episode .share .label {
-  font-family: 'Roboto', sans-serif !important;
-  color: #f2f2f2 !important;
-  font-weight: normal;
+.social {
+  margin-left: -4px;
 }
 
 main {
