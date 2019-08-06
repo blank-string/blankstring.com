@@ -22,7 +22,7 @@ const main = async () => {
 
   let index = episodes.length - 1
   for (let { title, description, link } of episodes) {
-    description = description.replace(/\n$/g, '')
+    description = description.replace(/\n$/g, '').replce('<p>', '').replce('</p>', '')
     const output = html
       .replace('<meta name="title" content="Blank String">', `<meta name="title" content="${title}">`)
       .replace('<meta property="og:title" content="Blank String">', `<meta property="og:title" content="${title}">`)
