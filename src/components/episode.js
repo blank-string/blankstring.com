@@ -4,7 +4,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShare, faClipboard, faTimes, faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faRedditAlien, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { facebook, reddit, twitter } from './sharer'
+import { facebook, reddit, twitter } from '../sharer'
 
 const SocialLink = ({ url, icon, label }) => <div>
   <a

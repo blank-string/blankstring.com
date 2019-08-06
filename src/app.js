@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import parser from 'fast-xml-parser'
 
 import initialState from './initial-state.json'
-import Hero from './hero'
+import Hero from './components/hero'
 import Main from './main'
-import Footer from './footer'
+import Footer from './components/footer'
 
 const reducer = (state, { type, payload }) => {
   if (type === 'fetch-rss') {

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Episodes from './episodes'
-import Pagination from './pagination'
+import Episodes from './components/episodes'
+import Pagination from './components/pagination'
 
 const MainTitle = ({ description }) => <h2 className='subtitle has-text-centered'>{description}</h2>
 

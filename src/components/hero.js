@@ -1,5 +1,5 @@
 import React from 'react'
-import BlankString from './icons/blank-string'
+import BlankString from '../icons/blank-string'
 
 import Hosts from './hosts'
 
