@@ -11,16 +11,15 @@
     "bulma": "^0.7.5",
     "fast-xml-parser": "^3.12.19",
     "merge": "^1.2.1",
-    "node-fetch": "^2.6.0",
     "react": "^16.8.6",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
-    "react-snap": "^1.23.0"
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
+    "node-fetch": "^2.6.0",
+    "react-scripts": "3.0.1",
     "eslint": "^6.1.0",
     "eslint-config-standard": "^13.0.1",
     "eslint-config-standard-react": "^8.0.0",
