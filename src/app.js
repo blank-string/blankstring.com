@@ -40,8 +40,8 @@ export default () => {
       <Router>
         <Switch>
           <Route exact path='/' render={(props) => <Main {...props} state={state} />} />
-          <Route path='/page' render={(props) => <Main {...props} state={state} />} />
           <Route path='/page/:page' render={(props) => <Main {...props} state={state} />} />
+          <Route path='/page' render={(props) => <Main {...props} state={state} />} />
           {/* <Route path='/episode' render={(props) => <Epsiode {...props} state={state} />} /> */}
           {/* <Route path='/episode/:episode' render={(props) => <Epsiode {...props} state={state} />} /> */}
           {/* <Route path='/distribution' render={(props) => <Distribution {...props} state={state} />} /> */}
