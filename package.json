@@ -36,7 +36,7 @@
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
     "eject": "SKIP_PREFLIGHT_CHECK=true react-scripts eject",
-    "predeploy": "npm run build && node scripts/create-episodes.js",
+    "predeploy": "npm run build && node scripts/create-pages.js",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {

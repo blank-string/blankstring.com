@@ -59,7 +59,7 @@ export default () => <div className='hosts'>
     <PocketCast />
   </HostLink>
   <HostLink
-    title='Pocket Cast'
+    title='Podbean'
     href='https://www.podbean.com/podcast-detail/kaf45-62411/Blank-String-Podcast'>
     <Podbean />
   </HostLink>
