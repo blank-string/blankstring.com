@@ -74,9 +74,9 @@ a:focus .icon {
   border: none;
 }
 
-.episode+.episode {
+.episode {
   border: none !important;
-  margin-top: 6em !important;
+  margin-bottom: 6em !important;
 }
 
 .episode .media-content {
