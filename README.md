@@ -18,9 +18,6 @@ npm start
 ## TODO
 
 * make the home page
-  * icon goes to episode page
   * search
-* make episode pages
 * make distribution pages
-* create a script which generates html files for each episode
 * travis to run this every day adding a "last updated" to each page

@@ -120,6 +120,7 @@ a:focus .icon {
 }
 
 .episode-image .image {
+  transition: box-shadow 0.1s ease-in-out;
   position: relative;
   background-color: #1F1C1C;
   border-radius: 4px;
@@ -127,6 +128,14 @@ a:focus .icon {
   margin-bottom: 8px;
   overflow: hidden;
 }
+
+.episode-image.is-link a:hover .image,
+.episode-image.is-link a:active .image,
+.episode-image.is-link a:focus .image {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.95), 0 0 4px rgba(0, 0, 0, 0.95);
+}
+
+
 
 .episode-image .image img {
   transform: rotate(90deg) scale(2.5) translateX(10px);

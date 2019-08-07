@@ -48,7 +48,7 @@ const LinkedImage = ({ number, size }) => <Link to={`/episode/${number}`}>
 export default ({ url, number = 0, title, size = 'small', link = true }) => {
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
-  return <figure className={`episode-image is-${size} is-${open ? 'open' : 'closed'}`}>
+  return <figure className={`episode-image is-${size} is-${open ? 'open' : 'closed'} is-${link ? 'link' : 'plain'}`}>
     {link
       ? <LinkedImage number={number} size={size} />
       : <PlainImage number={number} size={size} />}
@@ -74,26 +74,28 @@ export default ({ url, number = 0, title, size = 'small', link = true }) => {
           <span>Close</span>
         </a>
         : null}
-      <div className={`links`}>
-        <SocialLink
-          url={facebook(url, { quote: title })}
-          icon={faFacebookF}
-          label='Facebook' />
-        <SocialLink
-          url={reddit(url, { title })}
-          icon={faRedditAlien}
-          label='Reddit' />
-        <SocialLink
-          url={twitter(url, { title })}
-          icon={faTwitter}
-          label='Twitter' />
-        <Copy
-          copied={copied}
-          url={url}
-          onCopy={() => {
-            setCopied(true)
-          }} />
-      </div>
+      {open
+        ? <div className={`links`}>
+          <SocialLink
+            url={facebook(url, { quote: title })}
+            icon={faFacebookF}
+            label='Facebook' />
+          <SocialLink
+            url={reddit(url, { title })}
+            icon={faRedditAlien}
+            label='Reddit' />
+          <SocialLink
+            url={twitter(url, { title })}
+            icon={faTwitter}
+            label='Twitter' />
+          <Copy
+            copied={copied}
+            url={url}
+            onCopy={() => {
+              setCopied(true)
+            }} />
+        </div>
+        : null}
     </div>
 
   </figure>
