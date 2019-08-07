@@ -14,6 +14,7 @@
     "react": "^16.8.6",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1"
   },
@@ -29,14 +30,15 @@
     "gh-pages": "^2.0.1",
     "mustache": "^3.0.1",
     "node-fetch": "^2.6.0",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-snap": "^1.23.0"
   },
   "scripts": {
     "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
     "eject": "SKIP_PREFLIGHT_CHECK=true react-scripts eject",
-    "predeploy": "npm run build && node scripts/create-pages.js",
+    "predeploy": "npm run build && react-snap && node scripts/create-sitemap.js",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
@@ -65,5 +67,13 @@
     "rules": {
       "react/prop-types": 0
     }
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/episode",
+      "/page",
+      "/disribution"
+    ]
   }
 }

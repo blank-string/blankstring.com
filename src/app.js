@@ -31,7 +31,6 @@ export default () => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
-    document.title = 'Blank String'
     if (state.loading) fetchRss(dispatch)
   })
 

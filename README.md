@@ -21,3 +21,4 @@ npm start
   * search
 * make distribution pages
 * travis to run this every day adding a "last updated" to each page
+* server side rendering and hydration
