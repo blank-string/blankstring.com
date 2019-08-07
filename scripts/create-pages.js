@@ -73,15 +73,20 @@ const generateMetaPage = ({ title, description = 'This is the Blank String podca
   .replace('<meta property="og:description" content="This is the Blank String podcast, staring Luke, Tim and Matt as they talk about things and stuff and junk and things.">', `<meta property="og:description" content="${description}">`)
   .replace('<meta property="og:url" content="https://blankstring.com">', `<meta property="og:url" content="${link}">`)
 
+const createEisode = (index, { title, description, link }) => {
+  description = description.replace(/\n$/g, '').replace('<p>', '').replace('</p>', '')
+  const output = generateMetaPage({ title, description, link })
+  const episodeDir = path.join(episodesDir, '' + index)
+  if (index !== '') fs.mkdirSync(episodeDir)
+  fs.writeFileSync(path.join(episodeDir, 'index.html'), output)
+  urls.push(`https://blankstring.com/episode/${index}`)
+}
+
 const createEpisodePages = (episodes) => {
+  createEisode('', episodes[0])
   let index = episodes.length - 1
-  for (let { title, description, link } of episodes) {
-    description = description.replace(/\n$/g, '').replace('<p>', '').replace('</p>', '')
-    const output = generateMetaPage({ title, description, link })
-    const episodeDir = path.join(episodesDir, '' + index)
-    fs.mkdirSync(episodeDir)
-    fs.writeFileSync(path.join(episodeDir, 'index.html'), output)
-    urls.push(`https://blankstring.com/episode/${index}`)
+  for (const episode of episodes) {
+    createEisode(index, episode)
     index -= 1
   }
 }
