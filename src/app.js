@@ -6,6 +6,7 @@ import parser from 'fast-xml-parser'
 import initialState from './initial-state.json'
 import Hero from './components/hero'
 import Main from './main'
+import EpisodeSingle from './episode-single'
 import NotFound from './not-found'
 import Footer from './components/footer'
 
@@ -44,8 +45,8 @@ export default () => {
           <Route exact path='/' render={(props) => <Main {...props} state={state} />} />
           <Route path='/page/:page' render={(props) => <Main {...props} state={state} />} />
           <Route path='/page' render={(props) => <Main {...props} state={state} />} />
-          {/* <Route path='/episode/:episode' render={(props) => <Epsiode {...props} state={state} />} /> */}
-          {/* <Route path='/episode' render={(props) => <Epsiode {...props} state={state} />} /> */}
+          <Route path='/episode/:episode' render={(props) => <EpisodeSingle {...props} state={state} />} />
+          <Route path='/episode' render={(props) => <EpisodeSingle {...props} state={state} />} />
           {/* <Route path='/distribution/:distribution' render={(props) => <Distribution {...props} state={state} />} /> */}
           {/* <Route path='/distribution' render={(props) => <Distribution {...props} state={state} />} /> */}
           <Route path='*' render={(props) => <NotFound {...props} state={state} />} />

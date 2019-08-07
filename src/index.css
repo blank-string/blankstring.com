@@ -7,6 +7,27 @@ html {
   color: #F2F2F2 !important;
 }
 
+.episode-single .content,
+.episode-single .title {
+  color: #F2F2F2;
+}
+
+.episode-single .content {
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.embed-container {
+  margin-top: 3em;
+  height: 102px;
+}
+
+.embed-container iframe {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
 
 .subtitle {
   background-color: transparent;
@@ -35,6 +56,10 @@ a:focus .icon {
   color: #b3b3b3 !important;
 }
 
+.is-256x256 {
+  width: 256px;
+  height: 256px;
+}
 
 .hero {
   background-color: #1F1C1C !important;
@@ -86,7 +111,7 @@ a:focus .icon {
 
 .episode {
   border: none !important;
-  margin-bottom: 6em !important;
+  margin-bottom: 1em !important;
 }
 
 .episode .media-content {
@@ -94,7 +119,7 @@ a:focus .icon {
   min-height: 120px;
 }
 
-.episode .image {
+.episode-image .image {
   position: relative;
   background-color: #1F1C1C;
   border-radius: 4px;
@@ -103,11 +128,23 @@ a:focus .icon {
   overflow: hidden;
 }
 
-.episode .image img {
+.episode-image .image img {
   transform: rotate(90deg) scale(2.5) translateX(10px);
 }
 
-.episode-number {
+.episode-image.is-large {
+  margin-bottom: 3em;
+}
+
+.episode-image.is-large .image {
+  margin: auto;
+}
+
+.episode-image.is-large .image img {
+  transform: rotate(90deg) scale(2.5) translateX(40px);
+}
+
+.episode-image .episode-number {
   font-family: 'Audiowide', cursive;
   font-size: 18px;
   color: #F2F2F2;
@@ -115,19 +152,24 @@ a:focus .icon {
   line-height: 64px;
 }
 
-.episode-image-container,
-.episode-number {
+.episode-image.is-large .episode-number {
+  font-size: 64px;
+  line-height: 256px;
+}
+
+.episode-image .episode-image-container,
+.episode-image .episode-number {
   position: absolute;
   width: 50%;
   height: 100%;
   top: 0;
 }
 
-.episode-number {
+.episode-image .episode-number {
   left: 0;
 }
 
-.episode-image-container {
+.episode-image .episode-image-container {
   right: 0;
 }
 
@@ -154,19 +196,29 @@ a:focus .icon {
   text-overflow: ellipsis;
 }
 
-.links {
-  position: absolute;
-  height: 0;
+.episode-image .social {
+  margin-left: -4px;
+}
+
+.episode-image.is-large .social {
+  font-size: 18px;
+  text-align: center;
+  margin-left: 0;
+  margin-top: 1rem;
+}
+
+.social {
+  height: 24px;
   overflow: hidden;
   transition: height 0.1s ease-in-out;
 }
 
-.links.is-open {
-  height: 108px;
+.episode-image.is-open .social {
+  height: 144px;
 }
 
-.social {
-  margin-left: -4px;
+.episode-image.is-large .links {
+  width: 100%;
 }
 
 main {
