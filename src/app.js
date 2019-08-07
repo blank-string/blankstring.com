@@ -36,11 +36,10 @@ export default () => {
   })
 
   return <div className='App'>
-    <header>
-      <Hero />
-    </header>
+    <header />
     <main className='main'>
       <Router>
+        <Hero />
         <Switch>
           <Route exact path='/' render={(props) => <Main {...props} state={state} />} />
           <Route path='/page/:page' render={(props) => <Main {...props} state={state} />} />
