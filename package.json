@@ -71,7 +71,6 @@
   },
   "reactSnap": {
     "include": [
-      "/",
       "/episode",
       "/page",
       "/disribution"

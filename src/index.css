@@ -136,6 +136,10 @@ a:focus .icon {
   min-height: 120px;
 }
 
+.episode-image {
+  min-width: 90px;
+}
+
 .episode-image .image {
   transition: box-shadow 0.1s ease-in-out;
   position: relative;
@@ -239,7 +243,7 @@ a:focus .icon {
   transition: height 0.1s ease-in-out;
 }
 
-.episode-image.is-open .social {
+.social.is-open {
   height: 144px;
 }
 
@@ -310,4 +314,102 @@ main {
 .hosts .stitcher,
 .hosts .tune-in {
   width: 44px;
+}
+
+.hosts .distribution {
+  font-size: 24px;
+}
+
+.distribution-link {
+  margin-top: 4em;
+}
+
+.distribution-link .social {
+  text-align: center;
+}
+
+.distribution-link .local {
+  height: 90px;
+}
+
+.distribution-link .local-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.distribution-link .local-container .icon {
+  fill: #F2F2F2;
+  height: auto;
+  width: 48px;
+  margin-right: 1rem;
+}
+
+.distribution-link .local-container {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.distribution-link .local:hover .icon,
+.distribution-link .local:active .icon,
+.distribution-link .local:focus .icon {
+  fill: #b3b3b3;
+}
+
+.distribution-link .local.is-not-linked .local-container .icon {
+  fill: #F2F2F2;
+}
+
+.distribution-link .local.is-not-linked .local-container {
+  color: #F2F2F2;
+}
+
+.distribution-link .external {
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 18px;
+}
+
+.distribution-hero-text-container {
+  position: relative;
+  height: 87px;
+}
+
+.distribution-hero-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.distribution-hero-text-left,
+.distribution-hero-text-right {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.distribution-hero-text-left {
+  background-color: transparent;
+  color: #F2F2F2;
+  text-align: justify;
+  font-size: 22px;
+  letter-spacing: 2px;
+  padding: 0;
+  white-space: normal;
+  max-width: 200px;
+  margin-right: 16px;
+}
+
+.distribution-hero-text-right {
+  color: #F2F2F2;
+  text-align: justify;
+  font-size: 58px;
+  letter-spacing: 4px;
+  font-weight: bold;
 }
