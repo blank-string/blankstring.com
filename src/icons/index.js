@@ -1,4 +1,4 @@
-// import Acast from './icons/acast'
+import Acast from './icons/acast'
 import Anchor from '../icons/anchor'
 import Breaker from '../icons/breaker'
 import CastBox from '../icons/cast-box'
@@ -14,6 +14,7 @@ import TuneIn from '../icons/tunein'
 
 export default {
   anchor: Anchor,
+  acast: Acast,
   breaker: Breaker,
   castBox: CastBox,
   googlePodcast: GooglePodcast,

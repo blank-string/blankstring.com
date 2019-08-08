@@ -19,6 +19,5 @@ npm start
 
 * make the home page
   * search
-* make distribution pages
 * travis to run this every day adding a "last updated" to each page
 * shows a loading spinner even though it has page contents
