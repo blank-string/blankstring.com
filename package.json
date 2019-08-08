@@ -73,7 +73,7 @@
     "include": [
       "/episode",
       "/page",
-      "/disribution"
+      "/distribution"
     ]
   }
 }
