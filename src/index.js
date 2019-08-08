@@ -25,6 +25,5 @@ window.cookieconsent.initialise({
   },
   palette: {
     popup: { background: '#1F1C1C' }
-  },
-  location: true
+  }
 })
