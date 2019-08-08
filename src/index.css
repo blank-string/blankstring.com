@@ -7,6 +7,23 @@ html {
   color: #F2F2F2 !important;
 }
 
+a,
+.button {
+  font-family: 'Roboto', sans-serif;
+}
+
+.cookie-content {
+  margin-bottom: 0 !important;
+}
+
+.cc-window {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.cc-compliance {
+  margin-left: auto;
+}
+
 .episode-single .content,
 .episode-single .title {
   color: #F2F2F2;
