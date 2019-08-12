@@ -413,3 +413,23 @@ main {
   letter-spacing: 4px;
   font-weight: bold;
 }
+
+.button-href {
+  background-color: transparent;
+  color: #F2F2F2;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+}
+
+.button-href:hover,
+.button-href:active,
+.button-href:focus {
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+.button-href:hover .icon,
+.button-href:active .icon,
+.button-href:focus .icon {
+  color: #b3b3b3;
+}

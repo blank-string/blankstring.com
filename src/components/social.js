@@ -8,6 +8,7 @@ import { facebook, reddit, twitter } from '../sharer'
 
 const SocialLink = ({ url, icon, label }) => <div>
   <a
+    className='button-href'
     rel='noopener noreferrer'
     target='_blank'
     href={url}>
@@ -19,7 +20,7 @@ const SocialLink = ({ url, icon, label }) => <div>
 </div>
 
 const Copy = ({ copied, url, onCopy }) => <div>
-  <a>
+  <button className='button-href'>
     <CopyToClipboard text={url} onCopy={onCopy}>
       <div>
         <i className='icon'>
@@ -28,7 +29,7 @@ const Copy = ({ copied, url, onCopy }) => <div>
         <span>Copy</span>
       </div>
     </CopyToClipboard>
-  </a>
+  </button>
 </div>
 
 export default ({ url, title }) => {
@@ -36,24 +37,28 @@ export default ({ url, title }) => {
   const [copied, setCopied] = useState(false)
   return <div className={`social is-${open ? 'open' : 'closed'}`}>
     {!open
-      ? <a onClick={() => {
-        setOpen(true)
-      }}>
+      ? <button
+        className='button-href'
+        onClick={() => {
+          setOpen(true)
+        }}>
         <i className='icon'>
           <FontAwesomeIcon icon={faShare} />
         </i>
         <span>Share</span>
-      </a>
+      </button>
       : null}
     {open
-      ? <a onClick={() => {
-        setOpen(false)
-      }}>
+      ? <button
+        className='button-href'
+        onClick={() => {
+          setOpen(false)
+        }}>
         <i className='icon'>
           <FontAwesomeIcon icon={faTimes} />
         </i>
         <span>Close</span>
-      </a>
+      </button>
       : null}
     {open
       ? <div className={`links`}>
