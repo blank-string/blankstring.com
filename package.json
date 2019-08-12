@@ -39,7 +39,6 @@
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
     "eject": "SKIP_PREFLIGHT_CHECK=true react-scripts eject",
-    "ci": "npm run build && react-snap && node scripts/create-sitemap.js",
     "predeploy": "npm run build && react-snap && node scripts/create-sitemap.js",
     "deploy": "gh-pages -d build"
   },
