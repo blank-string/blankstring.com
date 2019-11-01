@@ -20,7 +20,8 @@ export default ({ state, match }) => {
         <div className='distribution-hero-text-container'>
           <div className='distribution-hero-text'>
             <pre className='distribution-hero-text-left'>{`Go listen to the
-well designed`}</pre>
+well designed`}
+            </pre>
             <p className='distribution-hero-text-right'>PODCAST</p>
           </div>
         </div>
@@ -30,7 +31,8 @@ well designed`}</pre>
               link={false}
               name={found.name}
               href={found.href}
-              title={found.title} />
+              title={found.title}
+            />
           </li>
         </ul>
       </div>

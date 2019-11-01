@@ -22,19 +22,38 @@
                 "href": "https://castbox.fm/channel/id1422683"
             },
             {
+                "title": "Castro",
+                "name": "castro",
+                "href": "https://castro.fm/podcast/a5935ff2-3017-4eb3-bb75-e67c26e9f4a3"
+            },
+            {
                 "title": "Google Podcast",
                 "name": "googlePodcast",
                 "href": "https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy83OWQwZDA4L3BvZGNhc3QvcnNz"
             },
             {
+                "title": "Himalaya",
+                "name": "himalaya",
+                "href": "https://www.himalaya.com/Comedy-podcasts/Blank-String-306376"
+            },
+            {
                 "title": "iTunes",
                 "name": "iTunes",
                 "href": "https://itunes.apple.com/us/podcast/blank-string/id1267592100?mt=2&uo=4"
+            },{
+                "title": "Listen Notes",
+                "name": "listenNotes",
+                "href": "https://www.listennotes.com/podcasts/blank-string/blank-string-plan-to-go-to-roQWv8ScgJ7/"
             },
             {
                 "title": "Overcast",
                 "name": "overcast",
                 "href": "https://overcast.fm/itunes1267592100/blank-string"
+            },
+            {
+                "title": "Player FM",
+                "name": "playerFM",
+                "href": "https://player.fm/series/blank-string-2443483"
             },
             {
                 "title": "Pocket Cast",

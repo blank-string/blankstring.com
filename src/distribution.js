@@ -5,7 +5,7 @@ import DistributionLink from './components/distribution-link'
 
 export default ({ state }) => <>
   <Helmet>
-    <title>{`Blank String Podcast Distribution`}</title>
+    <title>Blank String Podcast Distribution</title>
     <meta name='title' content='Blank String Podcast Distribution' />
     <meta name='og:title' content='Blank String Podcast Distribution' />
     <meta name='description' content='You can find Blank String on the following platforms' />
@@ -20,7 +20,8 @@ export default ({ state }) => <>
           <DistributionLink
             name={name}
             href={href}
-            title={title} />
+            title={title}
+          />
         </li>)}
       </ul>
     </div>
