@@ -15,7 +15,7 @@ if (rootElement.hasChildNodes()) {
 }
 
 if (navigator.userAgent !== 'ReactSnap') serviceWorker.register()
-else serviceWorker.unregister()
+else serviceWorker.register()
 
 window.cookieconsent.initialise({
   container: document.getElementById('content'),
