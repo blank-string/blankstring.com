@@ -433,3 +433,25 @@ main {
 .button-href:focus .icon {
   color: #b3b3b3;
 }
+
+.cookies {
+  position: fixed;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  bottom: 0;
+}
+
+.cookies.is-accepted {
+  bottom: -300px;
+}
+
+.cookies .notification {
+  background-color: #1F1C1C !important;
+}
+
+.cookies .notification .content {
+  font-family: 'Roboto', sans-serif !important;
+  color: #F2F2F2;
+  letter-spacing: 1px;
+  font-size: 18px;
+}

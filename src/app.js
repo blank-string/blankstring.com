@@ -2,6 +2,7 @@ import React, { useReducer, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import parser from 'fast-xml-parser'
+import cookies from 'js-cookie'
 
 import initialState from './initial-state.json'
 import Hero from './components/hero'
@@ -10,15 +11,21 @@ import EpisodeSingle from './episode-single'
 import Distribution from './distribution'
 import DistributionSingle from './distribution-single'
 import NotFound from './not-found'
+import Cookies from './components/cookies'
 import Footer from './components/footer'
 
 const reducer = (state, { type, payload }) => {
   if (type === 'fetch-rss') {
     const { description, item } = payload.data.rss.channel
-    return { loading: false, description, item, distribution: state.distribution }
+    return { ...state, loading: false, description, item, distribution: state.distribution }
   }
 
-  return { loading: true }
+  if (type === 'accepted') {
+    cookies.set('accepted', true)
+    return { ...state, accepted: true }
+  }
+
+  return { ...state }
 }
 
 const fetchRss = async (dispatch) => {
@@ -30,6 +37,9 @@ const fetchRss = async (dispatch) => {
 }
 
 export default () => {
+  initialState.accepted = cookies.get('accepted') || false
+  initialState.loading = true
+
   const [state, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
@@ -51,7 +61,8 @@ export default () => {
           <Route path='*' render={(props) => <NotFound {...props} state={state} />} />
         </Switch>
       </main>
+      <Cookies dispatch={dispatch} accepted={state.accepted} />
       <Footer state={state} />
     </Router>
-  </div>
+         </div>
 }

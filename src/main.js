@@ -27,10 +27,9 @@ export default ({ match, state }) => {
       </section>
       <section className='section'>
         {state.loading ? null : <Pagination page={page} state={state} />}
-        {/* <input type='text' placeholder='Search Title or Description' /> */}
         <Episodes page={page} state={state} />
         {state.loading ? null : <Pagination page={page} state={state} />}
       </section>
     </div>
-  </>
+         </>
 }
