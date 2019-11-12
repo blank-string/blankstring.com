@@ -31,5 +31,5 @@ export default ({ accepted, dispatch }) => {
         </nav>
       </div>
     </div>
-         </div>
+  </div>
 }

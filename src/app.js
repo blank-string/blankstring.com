@@ -16,13 +16,22 @@ import Footer from './components/footer'
 
 const reducer = (state, { type, payload }) => {
   if (type === 'fetch-rss') {
-    const { description, item } = payload.data.rss.channel
+    let { description, item } = payload.data.rss.channel
+    item = item.map(i => ({ ...i, more: false }))
     return { ...state, loading: false, description, item, distribution: state.distribution }
   }
 
   if (type === 'accepted') {
     cookies.set('accepted', true)
     return { ...state, accepted: true }
+  }
+
+  if (type === 'more') {
+    const item = state.item.map(i => ({
+      ...i,
+      more: i['itunes:episode'] === payload.number ? !i.more : i.more
+    }))
+    return { ...state, item }
   }
 
   return { ...state }
@@ -37,21 +46,21 @@ const fetchRss = async (dispatch) => {
 }
 
 export default () => {
-  initialState.accepted = cookies.get('accepted') || false
+  initialState.accepted = Boolean(cookies.get('accepted')) || false
   initialState.loading = true
 
   const [state, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
     if (state.loading) fetchRss(dispatch)
-  })
+  }, [state.loading])
 
   return <div className='App'>
     <Router>
       <Hero state={state} />
       <main className='main'>
         <Switch>
-          <Route exact path='/' render={(props) => <Main {...props} state={state} />} />
+          <Route exact path='/' render={(props) => <Main {...props} state={state} dispatch={dispatch} />} />
           <Route path='/page/:page' render={(props) => <Main {...props} state={state} />} />
           <Route path='/page' render={(props) => <Main {...props} state={state} />} />
           <Route path='/episode/:episode' render={(props) => <EpisodeSingle {...props} state={state} />} />
@@ -61,7 +70,7 @@ export default () => {
           <Route path='*' render={(props) => <NotFound {...props} state={state} />} />
         </Switch>
       </main>
-      <Cookies dispatch={dispatch} accepted={state.accepted} />
+      {navigator.userAgent !== 'ReactSnap' ? <Cookies dispatch={dispatch} accepted={state.accepted} /> : null}
       <Footer state={state} />
     </Router>
          </div>

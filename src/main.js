@@ -6,7 +6,7 @@ import Pagination from './components/pagination'
 
 const MainTitle = ({ description }) => <h2 className='subtitle has-text-centered'>{description}</h2>
 
-export default ({ match, state }) => {
+export default ({ match, state, dispatch }) => {
   const page = Number(match.params.page) || 1
   const title = 'Blank String Podcast'
   const description = state.description
@@ -27,9 +27,9 @@ export default ({ match, state }) => {
       </section>
       <section className='section'>
         {state.loading ? null : <Pagination page={page} state={state} />}
-        <Episodes page={page} state={state} />
+        <Episodes page={page} state={state} dispatch={dispatch} />
         {state.loading ? null : <Pagination page={page} state={state} />}
       </section>
     </div>
-         </>
+  </>
 }

@@ -18,5 +18,3 @@ npm start
 ## TODO
 
 * shows a loading spinner even though it has page contents, would be good to not add a spinner or have flashing...
-* show more I don't think does anything on mobile
-* the accept cookies does not clear
