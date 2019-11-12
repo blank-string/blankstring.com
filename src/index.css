@@ -136,6 +136,10 @@ a:focus .icon {
   min-height: 120px;
 }
 
+.episode .media-left {
+  margin-right: 0 !important;
+}
+
 .episode-image {
   min-width: 90px;
 }
@@ -419,6 +423,7 @@ main {
   color: #F2F2F2;
   font-family: 'Roboto', sans-serif;
   border: none;
+  padding: 0;
 }
 
 .button-href:hover,

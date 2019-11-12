@@ -16,7 +16,7 @@ export default ({ url, number = 0, title, description, more, dispatch }) => {
       <p className='content is-hidden-mobile'>{description}</p>
       <div className='is-hidden-tablet'>
         <button
-          className='button'
+          className='button-href'
           onClick={() => {
             dispatch({
               type: 'more',
@@ -31,5 +31,5 @@ export default ({ url, number = 0, title, description, more, dispatch }) => {
         <p className={`content is-${more ? 'exapnded' : 'collapsed'}`}>{description}</p>
       </div>
     </div>
-  </article>
+         </article>
 }
