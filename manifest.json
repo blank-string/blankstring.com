@@ -50,6 +50,6 @@
   "display": "standalone",
   "name": "Blank String",
   "short_name": "Blank String",
-  "start_url": "https://blankstring.com",
+  "start_url": "/",
   "theme_color": "#1F1C1C"
 }
