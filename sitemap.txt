@@ -75,6 +75,7 @@ https://blankstring.com/episode/57/
 https://blankstring.com/episode/58/
 https://blankstring.com/episode/59/
 https://blankstring.com/episode/6/
+https://blankstring.com/episode/60/
 https://blankstring.com/episode/7/
 https://blankstring.com/episode/8/
 https://blankstring.com/episode/9/
@@ -85,3 +86,4 @@ https://blankstring.com/page/3/
 https://blankstring.com/page/4/
 https://blankstring.com/page/5/
 https://blankstring.com/page/6/
+https://blankstring.com/page/7/
